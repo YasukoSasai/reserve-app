@@ -3,8 +3,8 @@
     <h1>子要素のcssが適用される</h1>こんにちは</div>
   <br>
   <div class="row">
-    <div *ngFor="let product of products" class="col-sm">
-        <a [routerLink]="['/detail']">
+    <div *ngFor="let product of products; let productId = index" class="col-sm">
+        <a [routerLink]="[productId]">
           <div class="card">
             <img src="../../assets/image/placeholder.png" class="card-img-top" alt="...">
             <div class="card-body">
