@@ -7,10 +7,11 @@ import { products } from 'src/app/products';
 })
 export class ProductListComponent implements OnInit {
 
-  products: any = products
+  products: any
   constructor() { }
 
   ngOnInit(): void {
+    this.products = products
   }
 
 }
