@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product.component';
+import { ProductService } from './shared/product.service';
 
 const routes: Routes = [
     {
@@ -24,7 +25,10 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule
   ],
-  providers: [],
+  // Serviceを入れる
+  providers: [
+    ProductService
+  ],
   bootstrap: []
 })
 export class ProductModule { }
