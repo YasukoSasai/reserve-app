@@ -13,6 +13,9 @@ class SampleDb{
         heading1:'sample text1',
         heading2:'sample text2',
         heading3:'sample text3',
+        heading_text1:'sampletexttext1',
+        heading_text2:'sampletexttext2',
+        heading_text3:'sampletexttext3',
       },
       {
         name: 'iPhone 12 Pro',

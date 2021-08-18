@@ -1,7 +1,10 @@
 const express = require('express')
-const mongoose = require('mongoose');
-const config = require('./config/dev');
+const mongoose = require('mongoose')
+const config = require('./config/dev')
 const SampleDb = require('./sample-db')
+
+
+const productRoutes = require('./routes/products')
 
 // 最初mangooseDBにつなぐ.then FakeDbのインスタンス作成して参照する
 mongoose.connect(config.DB_URI, {
@@ -18,9 +21,8 @@ mongoose.connect(config.DB_URI, {
 
 const app = express()
 
-app.get('/products', function(req,res){
-  res.json({'success':true})
-})
+// このapi叩いたらproductRoutesを読みに行く
+app.use('/api/v1/products',productRoutes)
 
 const PORT = process.env.PORT || '3001'
 
